@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-from jge842 import *
-from MancalaBoard import *
-from MancalaGUI import *
+from Player import Agent
+from MancalaGUI import startGame
 
-player1 = jge842(1, 4)
-player2 = jge842(2, 3)
+player1 = Agent(1, 4)
+player2 = Agent(2, 3)
 
 startGame(player1, player2)

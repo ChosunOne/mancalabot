@@ -1,7 +1,7 @@
 
-from Tkinter import *
+from tkinter import *
 from MancalaBoard import *
-from jge842 import *
+from Player import *
 
 class MancalaWindow:
     """# A very simple GUI for playing the game of Mancala."""
@@ -122,7 +122,7 @@ class MancalaWindow:
         if self.turn.type == Player.HUMAN:
             self.enableBoard()
         else:
-            move = self.turn.chooseMove( self.game )
+            move = self.turn.choose_move(self.game)
             playAgain = self.game.makeMove( self.turn, move )
             if not playAgain:
                 self.swapTurns()
